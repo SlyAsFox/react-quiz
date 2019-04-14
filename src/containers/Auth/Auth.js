@@ -11,7 +11,7 @@ import axios from 'axios';
 }*/ //Не использую потому что линт выдает варнинг, обошёл библиотекой is_js
 
 export default class Auth extends Component{
-
+    // TODO review: add space after Component
     state = {
         isFormValid: false,
         formControls:{
@@ -48,6 +48,7 @@ export default class Auth extends Component{
             password: this.state.formControls.password.value,
             returnSecureToken: true
         }
+        //TODO review: Use destruction for formControl ( const { email, password } = this.state.formControls );
         try{
             const response = await axios.post('https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyBVrgGuT--z52fll2namFZukUOjxUIYYf8', authData);
 
@@ -55,6 +56,8 @@ export default class Auth extends Component{
         }catch (e) {
             console.log(e);
         }
+
+        //TODO review: Create diffent folder Services. In this folder create file as API or request where you write all your methods which work with API. (If will have some question write to me in slack);
     };
 
     registerHandler = async () => {
@@ -63,6 +66,8 @@ export default class Auth extends Component{
             password: this.state.formControls.password.value,
             returnSecureToken: true
         }
+
+        //TODO review: the same as above;
         try{
             const response = await axios.post('https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=AIzaSyBVrgGuT--z52fll2namFZukUOjxUIYYf8', authData);
 
@@ -70,6 +75,8 @@ export default class Auth extends Component{
         }catch (e) {
             console.log(e);
         }
+
+        //TODO review: the same as above;
     };
 
     submitHandler = event => {
@@ -86,6 +93,7 @@ export default class Auth extends Component{
         if(validation.required){
             isValid = value.trim() !== '' && isValid;
         }
+        //TODO review: I this if valid will false nex checked don't have any reason;
 
         if(validation.email){
             isValid = is.email(value) && isValid;
@@ -93,6 +101,7 @@ export default class Auth extends Component{
 
         if(validation.minLength){
         isValid = value.length >= validation.minLength && isValid;
+        //TODO review: fix spaces;
         }
 
         return isValid;
@@ -117,11 +126,14 @@ export default class Auth extends Component{
         this.setState({
             formControls, isFormValid
         });
+        //TODO review: write object in comulm;
     };
 
     renderInputs() {
         return Object.keys(this.state.formControls).map((controlName, index) => {
             const control = this.state.formControls[controlName];
+            //TODO review: please use destruction for control;
+
             return(
                 <Input
                     key={controlName + index}
@@ -137,6 +149,7 @@ export default class Auth extends Component{
                     }}
                 />
             )
+        //TODO review: please don't use index for key. key must be unique identificator;  
         })
     }
 
@@ -147,6 +160,7 @@ export default class Auth extends Component{
                     <h1>Authorization</h1>
 
                     <form onSubmit={this.submitHandler} className={classes.AuthForm}>
+                        {/* TODO create FormComponent and use him for all forms */}
 
                         {this.renderInputs()}
 
@@ -164,6 +178,7 @@ export default class Auth extends Component{
                         >
                             Sign up
                         </Button>
+                        {/* TODO review: please use destruction for state; */}
                     </form>
 
                 </div>
