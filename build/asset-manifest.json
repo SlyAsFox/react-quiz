@@ -1,0 +1,13 @@
+{
+  "main.css": "/react-quiz/build/static/css/main.0dfccc7c.chunk.css",
+  "main.js": "/react-quiz/build/static/js/main.7fec03ca.chunk.js",
+  "main.js.map": "/react-quiz/build/static/js/main.7fec03ca.chunk.js.map",
+  "runtime~main.js": "/react-quiz/build/static/js/runtime~main.6a1b4943.js",
+  "runtime~main.js.map": "/react-quiz/build/static/js/runtime~main.6a1b4943.js.map",
+  "static/js/2.47adc3b8.chunk.js": "/react-quiz/build/static/js/2.47adc3b8.chunk.js",
+  "static/js/2.47adc3b8.chunk.js.map": "/react-quiz/build/static/js/2.47adc3b8.chunk.js.map",
+  "index.html": "/react-quiz/build/index.html",
+  "precache-manifest.682fc4d9f27b05751e74df931d4dbb14.js": "/react-quiz/build/precache-manifest.682fc4d9f27b05751e74df931d4dbb14.js",
+  "service-worker.js": "/react-quiz/build/service-worker.js",
+  "static/css/main.0dfccc7c.chunk.css.map": "/react-quiz/build/static/css/main.0dfccc7c.chunk.css.map"
+}
