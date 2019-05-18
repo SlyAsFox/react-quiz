@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './FinishedQuiz.css';
 import Button from '../UI/Button/Button'
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const FinishedQuiz = props => {
     const successCount = Object.keys(props.results).reduce((total, key)=>{
@@ -9,7 +9,7 @@ const FinishedQuiz = props => {
             total++;
         }
         return total;
-    }, 0)
+    }, 0);
 
     return(
         <div className={classes.FinishedQuiz}>
@@ -19,7 +19,7 @@ const FinishedQuiz = props => {
                         'fa',
                         props.results[quizItem.id] === 'error' ? 'fa-times' : 'fa-check',
                         classes[props.results[quizItem.id]]
-                    ]
+                    ];
 
                     return (
                         <li
@@ -42,6 +42,6 @@ const FinishedQuiz = props => {
             </div>
         </div>
     )
-}
+};
 
 export default FinishedQuiz;
