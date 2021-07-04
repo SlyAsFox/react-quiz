@@ -3,8 +3,9 @@ import classes from './Layout.css'
 import MenuToggle from '../../components/Navigation/MenuToggle/MenuToggle'
 import Drawer from '../../components/Navigation/Drawer/Drawer';
 
+//TODO: this isn't HOC;
 class Layout extends Component {
-
+    //TODO:  CHECK you all files and add ;
     state = {
         menu: false
     }
@@ -13,6 +14,7 @@ class Layout extends Component {
         this.setState({
             menu: !this.state.menu
         })
+        // TODO if you nedd state for change your state use setState(prevState => ({ menu: prevState.menu }))
     }
 
     menuCloseHandler = () => {

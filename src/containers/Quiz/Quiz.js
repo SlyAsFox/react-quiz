@@ -16,7 +16,7 @@ class Quiz extends Component{
     };
 
     onAnswerClickHandler = (answerId) => {
-
+    //TODO review add space before {;
         if(this.state.answerState){
             const key = Object.keys(this.state.answerState)[0];
             if(this.state.answerState[key] === 'success'){
@@ -47,6 +47,8 @@ class Quiz extends Component{
                         activeQuestion: this.state.activeQuestion + 1,
                         answerState: null
                     });
+
+                    // TODO if you need state for change your state use setState((prevState => ({ ...YOUR_PROPERTY })));
                 }
                 window.clearTimeout(timeout);
             }, 1000);
@@ -84,6 +86,7 @@ class Quiz extends Component{
         }catch (e){
             console.log(e);
         }
+        //TODO review: Create diffent folder Services. In this folder create file as API or request where you write all your methods which work with API. (If will have some question write to me in slack);
     }
 
     render(){
@@ -91,6 +94,8 @@ class Quiz extends Component{
             <div className={classes.Quiz}>
                 <div className={classes.QuizWrapper}>
                     <h1>Answer all the questions</h1>
+
+        {/* TODO review: Use destruction for state; */}
 
                     {
                         this.state.loading
@@ -109,6 +114,8 @@ class Quiz extends Component{
                                 answerNumber = {this.state.activeQuestion + 1}
                                 state={this.state.answerState}
                             />
+
+                            // TOOD state it as realy bad name for props in React rename place.
                     }
                 </div>
             </div>

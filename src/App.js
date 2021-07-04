@@ -5,8 +5,9 @@ import QuizList from './containers/QuizList/QuizList';
 import QuizCreator from './containers/QuizCreator/QuizCreator';
 import Auth from './containers/Auth/Auth';
 import {Route, Switch} from 'react-router-dom';
+//TODO review: add spaces inside curly brackets;
 
-
+//TODO review: App component must be as more clear; Create RoutingComponent and move the routing logic into this component;
 class App extends Component {
   render() {
     return (

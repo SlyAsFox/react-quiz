@@ -40,6 +40,8 @@ export default class QuizList extends Component{
         } catch (e) {
             console.log(e)
         }
+
+        
     }
 
     render() {

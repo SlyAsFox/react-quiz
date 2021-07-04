@@ -4,12 +4,15 @@ import classes from './Input.css';
 function isInvalid({valid, touched, shouldValidate}){
     return !valid && shouldValidate && touched;
 }
+//TODO review: Create file with helper function end move this function inside this file;
+
 
 const Input = props => {
     const inputType = props.type || 'text';
     const cls = [classes.Input];
+    //TODO review: plase rename cls;
     const htmlFor = `${inputType}-${Math.random()}`;
-
+    //TODO review: What will if Math.random giv the same result;
     if(isInvalid(props)){
         cls.push(classes.invalid)
     }

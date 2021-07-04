@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
+//TODO review: Add space inside curly brakets;
 import classes from './QuizCreator.css';
 import Input from '../../components/UI/Input/Input';
 import Button from '../../components/UI/Button/Button';
 import {createControl, validate, validateForm} from '../../form/formFramework';
+//TODO review: Add space inside curly brakets;
 import Auxillary from '../../hoc/Auxiliary/Auxiliary';
 import Select from '../../components/UI/Select/Select';
 import axios from '../../axios/axios-quiz';
@@ -14,9 +16,11 @@ function createOptionControl(number) {
         errorMessage: 'Option field cannot be empty',
         id: number
     }, {required: true})
+    //TODO review add ;
 }
 
 function createFormControls() {
+    //TODO review add space beetwen return and {. And inside {  };
     return{
         question: createControl({
             label: 'Input question:',
@@ -27,6 +31,8 @@ function createFormControls() {
         option3: createOptionControl(3),
         option4: createOptionControl(4)
     }
+
+    //TODO review: Whant you will do if you will have about 50 options?;
 }
 
 export default class QuizCreator extends Component{
@@ -50,6 +56,7 @@ export default class QuizCreator extends Component{
         const index = quiz.length + 1;
 
         const {question, option1, option2, option3, option4} = this.state.formControls;
+        //TODO review add space inside {  };
 
         const questionItem = {
             question: question.value,
@@ -118,6 +125,7 @@ export default class QuizCreator extends Component{
 
             return (
                 <Auxillary key={controlName + index}>
+                {/* TODO review: don't use index as key */}
                     <Input
                     label={control.label}
                     value={control.value}
